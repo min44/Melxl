@@ -6,9 +6,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="Data\Data.xlsx" />
-        <Compile Include="Types.fs" />
-        <Compile Include="Library.fs" />
+        <Content Include="Data\Persons.xlsx" />
+        <Compile Include="Domain\Abstract.fs" />
+        <Compile Include="Domain\Types.fs" />
+        <Compile Include="Domain\Constructor.fs" />
+        <Compile Include="Utils\Reflection.fs" />
+        <Compile Include="Provider.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 

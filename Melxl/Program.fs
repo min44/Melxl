@@ -1,15 +1,11 @@
 module Melxl.Program
 
-open FSharp.Interop.Excel
+open Melxl
+open Melxl.Domain
+open Provider
 
-module private Data = 
-    type DataTypes = ExcelFile<"Data\Data.xlsx">
-    type Row = DataTypes.Row
-    let dataTypes = new DataTypes()
-    let nameNotIsNull (row:Row) = row.Name |> isNull |> not
-    let data = dataTypes.Data |> Seq.filter nameNotIsNull |> List.ofSeq
 
-open Data
-let persons = data |> List.map (fun x -> x.Name)
-
-printf $"{persons}"
+Persons
+|> Seq.filter(fun x -> x.Gender = Male)
+|> Seq.iter(fun x -> printfn $"{x.Name}")
+// Nick and Franсois only

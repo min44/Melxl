@@ -1,4 +1,4 @@
-﻿module Melxl.Library
+﻿module Melxl.Reflection
 
 open System
 open Microsoft.FSharp.Reflection

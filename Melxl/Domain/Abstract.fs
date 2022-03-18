@@ -1,6 +1,6 @@
-﻿module Melxl.Types
+﻿namespace Melxl.Domain
 
-type KindOfNonBinary =
+type NonBinary =
     | Agender
     | Demigender
     | Genderfluid
@@ -11,4 +11,4 @@ type KindOfNonBinary =
 type Gender =
     | Male
     | Female
-    | NonBinary of KindOfNonBinary
+    | NonBinary of NonBinary
