@@ -12,7 +12,7 @@ module private Data =
     let nameNotIsNull (row:Row) = row.Name |> isNull |> not
     let data = dataTypes.Data |> Seq.filter nameNotIsNull |> List.ofSeq
     let createPerson (r: Row) =
-        PersonConstructor.Create
+        PersonConstructor.CreatePerson
             r.Name
             (Int32.Parse r.Age)
             (GetCaseByName r.Gender)
