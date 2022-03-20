@@ -1,7 +1,7 @@
 ﻿namespace Melxl.Domain
 
-module PersonConstructor =
-    let CreatePerson name y z =
+module PersonInfoConstructor =
+    let Create name age gender =
         { Name = name
-          Age = y
-          Gender = z }
+          Age = age
+          Gender = gender }

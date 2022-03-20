@@ -6,18 +6,17 @@ open Melxl.Domain
 open Reflection
 
 module private Data = 
-    type DataTypes = ExcelFile<"Data\Persons.xlsx", ForceString=true>
+    type DataTypes = ExcelFile<"Data\Info.xlsx", ForceString=true>
     type Row = DataTypes.Row
     let dataTypes = new DataTypes()
     let nameNotIsNull (row:Row) = row.Name |> isNull |> not
     let data = dataTypes.Data |> Seq.filter nameNotIsNull |> List.ofSeq
-    let createPerson (r: Row) =
-        PersonConstructor.CreatePerson
+    let createInfo (r: Row) =
+        PersonInfoConstructor.Create
             r.Name
             (Int32.Parse r.Age)
             (GetCaseByName r.Gender)
-    let persons = data |> Seq.map createPerson 
-    
+    let info = data |> Seq.map createInfo 
 
 open Data
-let Persons = persons
+let Info = info
