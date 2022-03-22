@@ -16,7 +16,7 @@ module private Data =
             r.Name
             (Int32.Parse r.Age)
             (GetCaseByName r.Gender)
-    let info = data |> Seq.map createInfo 
+    let info = Seq.map createInfo data 
 
 open Data
 let Info = info

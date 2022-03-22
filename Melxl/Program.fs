@@ -12,3 +12,7 @@ let personsGreetings =
 
 personsGreetings |> ExportToExcel |> OpenTable
 
+let plusOne x y = x 2 + y
+let interFunc y = plusOne float y 
+let listOne = [1.0 .. 10.0]
+let listPlusOne = Seq.map interFunc listOne

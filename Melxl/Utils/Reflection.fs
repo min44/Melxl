@@ -18,12 +18,13 @@ module private Reflection =
 open Reflection
 let GetAllCases<'T1> = GetAllCaseObjects typeof<'T1> |> Seq.cast<'T1> |> List.ofSeq
     
-let GetCaseByName<'T1> name =
+let GetCaseByName<'x> name =
     try 
-        let allCases = GetAllCases<'T1>
+        let allCases = GetAllCases<'x>
         let case = allCases |> Seq.tryFind (fun x -> x.ToString() = name)
         match case with
         | Some valueCase -> valueCase
-        | None -> raise <| Exception $"Error: Case name {name} is not exist in {typeof<'T1>}"
+        | None -> raise <| Exception $"Error: Case name {name} is not exist in {typeof<'x>}"
     with ex -> raise <| Exception ex.Message
     
+let somestr: string = "eewierwurp"
