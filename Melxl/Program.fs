@@ -3,16 +3,12 @@ module Melxl.Program
 open Melxl
 open Melxl.Domain
 open Provider
-open Export
 
-let personsGreetings =
-    Info
-    |> Seq.map Person
-    |> Seq.map(fun x -> x.GreetingsText)
+let Persons = Info |> Seq.map Person
+let Finder = Persons |> Seq.head |> Finder
+let searchingResult = Finder.FindTreasure()
 
-personsGreetings |> ExportToExcel |> OpenTable
+match searchingResult with
+| Ok value -> printfn $"{value}"
+| Error value -> printfn $"{value}"
 
-let plusOne x y = x 2 + y
-let interFunc y = plusOne float y 
-let listOne = [1.0 .. 10.0]
-let listPlusOne = Seq.map interFunc listOne
