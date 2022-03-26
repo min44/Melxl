@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl", "Melxl\Melxl.fsproj", "{C435DD5B-C6C0-49EE-80CD-51C3C6295090}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl.Startup", "Melxl.Startup\Melxl.Startup.fsproj", "{C435DD5B-C6C0-49EE-80CD-51C3C6295090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Melxl.UI", "Melxl.UI\Melxl.UI.csproj", "{814C6010-EF23-4C8B-954F-3BEE347DE3EE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl.Utils", "Melxl.Utils\Melxl.Utils.fsproj", "{A30F37FA-4C95-4483-9536-405AE3729033}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl.Domain", "Melxl.Domain\Melxl.Domain.fsproj", "{9E212E44-A0E7-448C-A475-C6BD1A65B225}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl.DataAccess", "Melxl.DataAccess\Melxl.DataAccess.fsproj", "{53A3F929-32CF-493D-BAFC-8F960F542CFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +20,21 @@ Global
 		{C435DD5B-C6C0-49EE-80CD-51C3C6295090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C435DD5B-C6C0-49EE-80CD-51C3C6295090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C435DD5B-C6C0-49EE-80CD-51C3C6295090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814C6010-EF23-4C8B-954F-3BEE347DE3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814C6010-EF23-4C8B-954F-3BEE347DE3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814C6010-EF23-4C8B-954F-3BEE347DE3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814C6010-EF23-4C8B-954F-3BEE347DE3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30F37FA-4C95-4483-9536-405AE3729033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30F37FA-4C95-4483-9536-405AE3729033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30F37FA-4C95-4483-9536-405AE3729033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30F37FA-4C95-4483-9536-405AE3729033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E212E44-A0E7-448C-A475-C6BD1A65B225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E212E44-A0E7-448C-A475-C6BD1A65B225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E212E44-A0E7-448C-A475-C6BD1A65B225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E212E44-A0E7-448C-A475-C6BD1A65B225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53A3F929-32CF-493D-BAFC-8F960F542CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A3F929-32CF-493D-BAFC-8F960F542CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A3F929-32CF-493D-BAFC-8F960F542CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A3F929-32CF-493D-BAFC-8F960F542CFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

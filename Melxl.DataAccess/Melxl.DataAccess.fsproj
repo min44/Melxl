@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="SqlData\Persons.db">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <Content Include="ExcelData\Info.xlsx" />
+        <Compile Include="ExcelProvider.fs" />
+        <Compile Include="SqlFunProvider.fs" />
+        <Compile Include="SqlProvider.fs" />
+        <Compile Include="EntityProvider.fs" />
+        <Compile Include="Migrations\BloggingContextModelSnapshot.fs" />
+        <Compile Include="Migrations\20220325162712_Initial.fs" />
+        <Compile Include="Migrations\20220325163555_AddPostsTable.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Melxl.Domain\Melxl.Domain.fsproj" />
+      <ProjectReference Include="..\Melxl.Utils\Melxl.Utils.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFrameworkCore.FSharp" Version="6.0.6" />
+      <PackageReference Include="ExcelProvider" Version="2.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.3" />
+      <PackageReference Include="NUnit" Version="3.13.3" />
+      <PackageReference Include="SqlFun" Version="2.0.6" />
+      <PackageReference Include="SQLProvider" Version="1.2.11" />
+      <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+      <PackageReference Include="System.Data.SQLite.Core" Version="1.0.115.5" />
+    </ItemGroup>
+
+</Project>

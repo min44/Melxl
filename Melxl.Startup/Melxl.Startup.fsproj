@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <LangVersion>latestmajor</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Export.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Update="FSharp.Core" Version="6.0.3" />
+      <PackageReference Include="Elmish.WPF" Version="3.5.8" />
+      <PackageReference Include="SwiftExcel" Version="1.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Melxl.DataAccess\Melxl.DataAccess.fsproj" />
+      <ProjectReference Include="..\Melxl.Domain\Melxl.Domain.fsproj" />
+      <ProjectReference Include="..\Melxl.Utils\Melxl.Utils.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Data\**" />
+    </ItemGroup>
+</Project>
