@@ -1,7 +1,5 @@
 ﻿namespace Melxl.Domain
 
-open System
-
 type Parameter =
     { Id: int
       Name: string
@@ -15,8 +13,7 @@ type PersonAlt =
       Parameters: Parameter list }
   
 type Person =
-    { Id: int64
+    { Id: int
       Name: string
-      Age: int64 }
-    
-//type Company = { Id: int; Name: string }
+      IsSelected: bool
+      Age: int }

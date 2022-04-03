@@ -2,12 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0-windows</TargetFramework>
-        <LangVersion>latestmajor</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
         <Compile Include="Export.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="App.fs" />
     </ItemGroup>
 
     <ItemGroup>

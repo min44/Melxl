@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl.Startup", "Melxl.Startup\Melxl.Startup.fsproj", "{C435DD5B-C6C0-49EE-80CD-51C3C6295090}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Melxl.Core", "Melxl.Core\Melxl.Core.fsproj", "{C435DD5B-C6C0-49EE-80CD-51C3C6295090}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Melxl.UI", "Melxl.UI\Melxl.UI.csproj", "{814C6010-EF23-4C8B-954F-3BEE347DE3EE}"
 EndProject

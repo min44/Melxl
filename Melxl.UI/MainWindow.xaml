@@ -3,8 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" FontFamily="./Fonts/#Roboto" mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ui="clr-namespace:Melxl.UI"
+        FontFamily="./Fonts/#Roboto" mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Window.Resources>
         <ResourceDictionary>
             <BooleanToVisibilityConverter x:Key="VisibilityConverter" />
@@ -30,11 +33,28 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40" Grid.Row="0" />
+            <RowDefinition Height="100" Grid.Row="0" />
             <RowDefinition Height="*" Grid.Row="1" />
         </Grid.RowDefinitions>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding State}" />
-        <DataGrid Grid.Row="1" ItemsSource="{Binding Persons}" CanUserResizeColumns="True">
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding State}" />
+            <TextBlock Text="{Binding Selected}" />
+            <Button Command="{Binding Remove}" Height="50" Width="120" />
+        </StackPanel>
+
+        <DataGrid
+            Grid.Row="1"
+            x:Name="DataGrid"
+            CanUserResizeColumns="True"
+            ItemsSource="{Binding Persons, NotifyOnTargetUpdated=True}"
+            SelectionMode="Extended"
+            HorizontalContentAlignment="Center">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}" BasedOn="{StaticResource {x:Type DataGridRow}}">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                </Style>
+            </DataGrid.RowStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -42,5 +62,4 @@
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
-
 </Window>

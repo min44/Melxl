@@ -6,9 +6,9 @@ module private Data =
     open Melxl.Utils
     open Melxl.Domain
     open Reflection
-    type DataTypes = ExcelFile<"ExcelData\Info.xlsx", ForceString=true>
+    type DataTypes = ExcelFile<"C:\Users\MSbook\RiderProjects\Melxl\Melxl.DataAccess\ExcelData\Info.xlsx", ForceString=true>
     type Row = DataTypes.Row
-    let dataTypes = new DataTypes()
+    let dataTypes = DataTypes()
     let nameNotIsNull (row:Row) = row.Name |> isNull |> not
     let data = dataTypes.Data |> Seq.filter nameNotIsNull |> List.ofSeq
     let createInfo (r: Row) =

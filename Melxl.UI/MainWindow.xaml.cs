@@ -1,11 +1,10 @@
-﻿using System.Windows;
+﻿namespace Melxl.UI;
 
-namespace Melxl.UI;
-public partial class MainWindow: Window
+public partial class MainWindow
 {
     public MainWindow()
     {
-        var cb = new Microsoft.Xaml.Behaviors.EventTrigger();
+        var _ = new Microsoft.Xaml.Behaviors.EventTrigger();
         InitializeComponent();   
     }
 }

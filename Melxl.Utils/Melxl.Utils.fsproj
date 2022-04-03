@@ -8,6 +8,7 @@
     <ItemGroup>
         <Compile Include="Reflection.fs" />
         <Compile Include="Logger.fs" />
+        <Compile Include="Debugs.fs" />
     </ItemGroup>
 
     <ItemGroup>
